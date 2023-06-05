@@ -1,3 +1,102 @@
 <resources>
     <string name="app_name">Dunder Mifflin Employee</string>
+
+    <string-array name="data_name">
+        <item>Michael Scott</item>
+        <item>Dwight Schrute</item>
+        <item>Jim Halpert</item>
+        <item>Pam Beesly</item>
+        <item>Ryan Howard</item>
+        <item>Oscar Martinez</item>
+        <item>Kevin Malone</item>
+        <item>Angela Martin</item>
+        <item>Andy Bernard</item>
+        <item>Stanley Hudson</item>
+        <item>Phyllis Vance</item>
+        <item>Meredith Palmer</item>
+        <item>Creed Bratton</item>
+        <item>Kelly Kapoor</item>
+        <item>Toby Flenderson</item>
+    </string-array>
+
+    <string-array name="data_role">
+        <item>Regional Manager</item>
+        <item>Salesman</item>
+        <item>Salesman</item>
+        <item>Receptionist</item>
+        <item>Salesman/Vice President Of Northeastern Sales</item>
+        <item>Accountant</item>
+        <item>Accountant</item>
+        <item>Head Of Accounting</item>
+        <item>Salesman/Regional Manager</item>
+        <item>Salesman</item>
+        <item>Saleswoman</item>
+        <item>Accountant/Purchasing</item>
+        <item>Quality Assurance Manager</item>
+        <item>Customer Service Representative</item>
+        <item>HR Representative</item>
+    </string-array>
+
+
+    <string-array name="data_description">
+        <item>Michael was one of the most tenured employees at Dunder Mifflin, and even if some might disagree, there is proof that he was a great boss. He began as a salesman at the company and climbed the corporate ladder. Eventually, he was promoted to Regional Manager of the Scranton branch.
+
+In Season 6, Michael had to share this position with Jim Halpert as Co-Regional Managers, but Jim did not stick in the position for too long. Michael kept his job until Season 7 when he left Dunder Mifflin to go to Colorado.</item>
+        <item>Dwight may have contributed to many of the cringiest moments in The Office, but he was the most hardworking employee at Dunder Mifflin. Like his idol Michael, Dwight was the top-earning salesman of the company. He was also the assistant to the Regional Manager, although this wasn\'t a real role.
+
+Dwight always wanted to be Regional Manager, which he eventually achieved in Season 9. He had a long and arduous journey to his dream job, but he deserved it the most.</item>
+        <item>Jim had a curious career trajectory. He began as a salesman at Dunder Mifflin, which he was seemed to excel at. When Jim moved to Stamford, he got promoted to Assistant Regional Manager of Sales. However, his return to Scranton was imminent. Jim was promoted to Co-Regional Manager with Michael but found that the responsibility was not worth it. Although he was pretty reluctant to accept a demotion, he realized he made better commissions as a salesman, so he went back to this position in Season 6.</item>
+        <item>Dunder Mifflin could not survive without Pam Beesly, who fulfilled many roles at the company. She began as the receptionist at the Scranton branch and also helped Michael through professional and personal hurdles.
+
+As a receptionist, Pam and Jim had one of the best friendships in The Office, which turned into an iconic romance. After leaving Dunder Mifflin for The Michael Scott Paper Company, Inc., Pam returned as a saleswomman, which didn\'t work well for her. She then fashioned herself into the role of Office Administrator.</item>
+        <item>The most interesting career trajectory in The Office was Ryan\'s, who had a promising future that was ruined by his haste to make a quick buck. He had a storied rise from temp to salesman and then to Vice President of Northeastern Sales for Dunder Mifflin, but that was where he started messing up.
+
+Ryan got promoted further to Northeast Regional Director of New Media, but his fraudulent activity got him arrested. Michael did bring him back to Dunder Mifflin after he was released, but Ryan was only rehired as a temp.</item>
+        <item>Oscar was the third and final member of the accounting team. He was also probably the most intelligent and sensible member of the Dunder Mifflin group. He was very good at his job and had little to no interest in any of the antics of his coworkers.
+
+Oscar was promoted to Chief Accountant of Dunder Mifflin Scranton, but he did not stick around at the paper company for too long. Instead, he quit his job to focus on running for senator.</item>
+        <item>Kevin Malone was lovable and goofy. There was no reason for Kevin to be a part of Angela\'s accounting team at Dunder Mifflin because he was so prone to making huge errors with numbers and office work in general.
+
+Still, Kevin stayed at his job for a number of years. However, when Dwight became Regional Manager, he sacked Kevin for his poor performance, which ended his long tenure in accounting.</item>
+        <item>Angela was good with numbers and extremely organized, which was why she was Head of Accounting at Dunder Mifflin. In addition to her official role in the office, she also headed the Party Planning Committee, which was usurped by Phyllis. Angela also acted as the Safety Manager of the Scranton branch. Although she was abrasive and sometimes mean to her colleagues, she was one of the best characters in The Office.</item>
+        <item>Andy was one of the few Stamford transplants who stuck around at the Scranton branch, but he wasn\'t a very good salesman. Along with Pam, Andy was one of the poorest performing workers at Dunder Mifflin, but somehow, he also became Regional Manager.
+
+This promotion was probably because Andy was an affable person, but he was terrible at this job. He skipped out for a month and got fired as a result, but he was later re-hired at Dunder Mifflin.</item>
+        <item>Stanley was a permanent fixture at Dunder Mifflin and had worked there for nearly two decades. He was also a salesman at the company, and it seemed like he did reasonably well because he earned good money. Stanley is often seen doing a crossword puzzle, getting annoyed at Michael\'s antics, and being grumpy. He found Dunder Mifflin incredibly stressful - mainly becaue of Michael\'s silly actions - which led him to suffer a mild heart attack in Season 5. At the end of The Office, he retired to go to Florida.</item>
+        <item>Mild-mannered Phyllis was usually seen working at her desk, and she was presumably a good worker. Like Jim, Dwight, and Stanley, she was a saleswoman, and she was quite satisfied with her role in the office.
+
+Phyllis took a small break from work when she married Bob Vance but came back to Dunder Mifflin almost immediately. She loved her job and was fiercely protective of her clients and sales. Phyllis also had a heartwarming friendship with Erin.</item>
+        <item>Meredith Palmer was typically either inebriated at work or getting involved in some wild antics. It isn\'t completely clear what Meredith did during her time at Dunder Mifflin, but she held a couple of roles in the company. At first, she was an accountant but was later moved to the Purchasing and Supplier Relations team.
+
+Meredith also came under fire for trying to solicit better rates for sex with a supplier, which she was surprisingly not terminated for. Whatever she did, she did it well because she was at Dunder Mifflin for a long time.</item>
+        <item>Creed Bratton was one of the strangest employees at Dunder Mifflin. He said some things and seemingly had terrible secrets, which was why it was surprising that he managed to get a corporate job. Officially, he was known as the Quality Assurance Manager at Dunder Mifflin, but he was hardly seen doing any work.
+
+Despite this, Creed somehow became the Acting Manager of the branch when Michael left Dunder Mifflin in Season 7. In the series finale, he is arrested.</item>
+        <item>Kelly Kapoor, who\'s very passionate about fashion, somehow ended up at the paper company as the Customer Service Representative. She was naturally talkative and knew how to sweet-talk customers, which made her a perfect fit.
+
+However, Kelly progressed quickly within the company. After the Sabre merger, Kelly got the chance to train and become a Minority Executive, which was a considerable leg-up from her previous position.</item>
+        <item>Michael Scott\'s greatest enemy was the HR Representative of Dunder Mifflin. This is mostly because Toby tried to keep him in check for his rogue behavior and strange antics. Toby left the office after a mortifying experience with Pam and went away to Costa Rica.
+
+For better or worse, an injury in Costa Rica made Toby shift back to Scranton, and he resumed his HR duties at Dunder Mifflin. However, in Season 9, Toby was fired by Dwight.</item>
+    </string-array>
+
+
+    <integer-array name="data_photo">
+        <item>@drawable/michael</item>
+        <item>@drawable/dwight</item>
+        <item>@drawable/jim</item>
+        <item>@drawable/pam</item>
+        <item>@drawable/ryan</item>
+        <item>@drawable/oscar</item>
+        <item>@drawable/kevin</item>
+        <item>@drawable/angela</item>
+        <item>@drawable/andy</item>
+        <item>@drawable/stanley</item>
+        <item>@drawable/phyllis</item>
+        <item>@drawable/meredith</item>
+        <item>@drawable/creed</item>
+        <item>@drawable/kelly</item>
+        <item>@drawable/toby</item>
+    </integer-array>
+
 </resources>
