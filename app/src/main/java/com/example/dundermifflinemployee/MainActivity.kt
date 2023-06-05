@@ -1,5 +1,6 @@
 package com.example.dundermifflinemployee
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -34,7 +35,11 @@ class MainActivity : AppCompatActivity() {
         binding.rvEmployee.apply {
             setHasFixedSize(true)
             layoutManager = LinearLayoutManager(this@MainActivity)
-            val employeeAdapter = EmployeeAdapter(listEmployee)
+            val employeeAdapter = EmployeeAdapter(listEmployee, onClick = {
+                val moveToDetailActivityPage = Intent(this@MainActivity, DetailActivity::class.java)
+                moveToDetailActivityPage.putExtra(DetailActivity.EMPLOYEE, it)
+                startActivity(moveToDetailActivityPage)
+            })
             adapter = employeeAdapter
         }
     }

@@ -6,7 +6,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.dundermifflinemployee.databinding.ItemRowEmployeeBinding
 
-class EmployeeAdapter(private val listEmployee: ArrayList<Employee>) :
+class EmployeeAdapter(
+    private val listEmployee: ArrayList<Employee>,
+    private val onClick: (Employee) -> Unit
+    ) :
     RecyclerView.Adapter<EmployeeAdapter.EmployeeViewHolder>() {
     inner class EmployeeViewHolder(var binding: ItemRowEmployeeBinding) :
         RecyclerView.ViewHolder(binding.root)
@@ -29,6 +32,9 @@ class EmployeeAdapter(private val listEmployee: ArrayList<Employee>) :
             Glide.with(holder.itemView.context)
                 .load(image)
                 .into(imgEmployee)
+        }
+        holder.itemView.setOnClickListener {
+            onClick(listEmployee[position])
         }
     }
 }
