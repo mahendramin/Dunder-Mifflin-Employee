@@ -1,5 +1,6 @@
 package com.example.dundermifflinemployee
 
+import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -33,8 +34,20 @@ class DetailActivity : AppCompatActivity() {
                 tvEmployeeOverview.text = employee.description
                 Glide.with(this@DetailActivity)
                     .load(employee.image)
-                    //.circleCrop()
                     .into(imgEmployee)
+                btnShare.setOnClickListener {
+                    val sendIntent = Intent().apply {
+                        action = Intent.ACTION_SEND
+                        putExtra(
+                            Intent.EXTRA_TEXT,
+                            "Here is the information about ${employee.name}, ${employee.role} of Dunder Mifflin Scranton: ${employee.description}"
+                        )
+                        type = "text/plain"
+                    }
+
+                    val shareIntent = Intent.createChooser(sendIntent, null)
+                    startActivity(shareIntent)
+                }
             }
         }
     }
@@ -42,6 +55,7 @@ class DetailActivity : AppCompatActivity() {
     companion object {
         const val EMPLOYEE = "employee"
     }
+
     override fun onSupportNavigateUp(): Boolean {
         onBackPressed()
         return true
