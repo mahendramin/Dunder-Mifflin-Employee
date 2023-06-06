@@ -7,6 +7,7 @@ import kotlinx.parcelize.Parcelize
 data class Employee(
     val name: String,
     val role: String,
+    val actor: String,
     val image: Int,
     val overview: String
 ): Parcelable

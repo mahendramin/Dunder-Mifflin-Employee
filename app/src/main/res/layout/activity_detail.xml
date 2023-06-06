@@ -74,13 +74,25 @@
             android:id="@+id/tvEmployeeRole"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_16dp"
             android:layout_marginTop="@dimen/dimen_8dp"
-            android:textAlignment="center"
             android:textSize="@dimen/dimen_text_size_24sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tvEmployeeName"
             tools:text="Employee Role" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvActorName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_16dp"
+            android:layout_marginTop="@dimen/dimen_8dp"
+            android:textSize="@dimen/dimen_text_size_24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvEmployeeRole"
+            tools:text="Portrayed By: Actor Name" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/action_share"
@@ -91,7 +103,7 @@
             android:text="@string/action_share"
             app:icon="@drawable/baseline_share_24"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tvEmployeeRole" />
+            app:layout_constraintTop_toBottomOf="@id/tvActorName" />
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/tvEmployeeOverview"

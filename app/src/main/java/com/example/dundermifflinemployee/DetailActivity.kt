@@ -31,6 +31,7 @@ class DetailActivity : AppCompatActivity() {
                 supportActionBar?.title = getString(R.string.title_format_employee_name, employee.name)
                 tvEmployeeName.text = employee.name
                 tvEmployeeRole.text = getString(R.string.label_format_employee_role, employee.role)
+                tvActorName.text = getString(R.string.label_format_actor_name, employee.actor)
                 tvEmployeeOverview.text = employee.overview
                 Glide.with(this@DetailActivity)
                     .load(employee.image)
@@ -40,7 +41,7 @@ class DetailActivity : AppCompatActivity() {
                         action = Intent.ACTION_SEND
                         putExtra(
                             Intent.EXTRA_TEXT,
-                            getString(R.string.label_format_share_text_content, employee.name, employee.role, employee.overview)
+                            getString(R.string.label_format_share_text_content, employee.name, employee.role, employee.actor, employee.overview)
                         )
                         type = "text/plain"
                     }

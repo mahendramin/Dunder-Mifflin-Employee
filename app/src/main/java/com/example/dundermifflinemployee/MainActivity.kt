@@ -27,14 +27,16 @@ class MainActivity : AppCompatActivity() {
         val listEmployee = ArrayList<Employee>()
         val dataName = resources.getStringArray(R.array.data_name)
         val dataRole = resources.getStringArray(R.array.data_role)
-        val dataDescription = resources.getStringArray(R.array.data_description)
+        val dataActorName = resources.getStringArray(R.array.data_actor_name)
+        val dataOverview = resources.getStringArray(R.array.data_overview)
         val dataPicture = resources.obtainTypedArray(R.array.data_photo)
         for (i in dataName.indices) {
             val employee = Employee(
                 dataName[i],
                 dataRole[i],
+                dataActorName[i],
                 dataPicture.getResourceId(i, -1),
-                dataDescription[i]
+                dataOverview[i]
             )
             listEmployee.add(employee)
         }

@@ -6,7 +6,9 @@
     <string name="label_email_value">mahendramin19@gmail.com</string>
     <string name="title_format_employee_name">%s\'s Profile</string>
     <string name="label_format_employee_role">Role: %s</string>
-    <string name="label_format_share_text_content">Here is the information about %s, %s of Dunder Mifflin Scranton: %s</string>
+    <string name="label_format_actor_name">Portrayed By: %s</string>
+    <string name="label_format_share_text_content">Here is the information about %s, %s of Dunder
+        Mifflin Scranton who are portrayed by %s: %s</string>
     <string name="content_description_employee_picture">Employee Picture</string>
 
     <string-array name="data_name">
@@ -45,8 +47,26 @@
         <item>HR Representative</item>
     </string-array>
 
+    <string-array name="data_actor_name">
+        <item>Steve Carell</item>
+        <item>Rainn Wilson</item>
+        <item>John Krasinski</item>
+        <item>Jenna Fischer</item>
+        <item>B. J. Novak</item>
+        <item>Oscar Nunez</item>
+        <item>Brian Baumgartner</item>
+        <item>Angela Kinsey</item>
+        <item>Ed Helms</item>
+        <item>Leslie David Baker</item>
+        <item>Phyllis Smith</item>
+        <item>Kate Flannery</item>
+        <item>Creed Bratton</item>
+        <item>Mindy Kaling</item>
+        <item>Paul Lieberstein</item>
+    </string-array>
 
-    <string-array name="data_description">
+
+    <string-array name="data_overview">
         <item>
             Michael was one of the most tenured employees at Dunder Mifflin, and even if some
             might disagree, there is proof that he was a great boss. He began as a salesman at the
