@@ -3,6 +3,8 @@ package com.example.dundermifflinemployee
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.dundermifflinemployee.databinding.ActivityMainBinding
 
@@ -14,6 +16,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setSupportActionBar(binding.toolbar)
         listEmployee.addAll(getListEmployee())
         setRecylerView()
     }
@@ -29,6 +32,21 @@ class MainActivity : AppCompatActivity() {
         }
         dataPicture.recycle()
         return listEmployee
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.main_menu, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+         when(item.itemId) {
+             R.id.favorite -> {
+                 val aboutIntent = Intent(this, AboutActivity::class.java)
+                 startActivity(aboutIntent)
+             }
+         }
+        return true
     }
 
     private fun setRecylerView() {

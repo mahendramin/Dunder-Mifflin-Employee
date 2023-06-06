@@ -14,6 +14,11 @@ class DetailActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityDetailBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setSupportActionBar(binding.toolbar)
+        supportActionBar?.let {
+            it.setDisplayHomeAsUpEnabled(true)
+            it.setDisplayShowHomeEnabled(true)
+        }
         val employeeData = if (Build.VERSION.SDK_INT >= 33) {
             intent.getParcelableExtra(EMPLOYEE, Employee::class.java)
         } else {
@@ -22,6 +27,7 @@ class DetailActivity : AppCompatActivity() {
         }
         employeeData?.let { employee ->
             binding.apply {
+                supportActionBar?.title = "${employee.name}'s Profile"
                 tvEmployeeName.text = employee.name
                 tvEmployeeRole.text = employee.role
                 tvEmployeeOverview.text = employee.description
@@ -36,5 +42,8 @@ class DetailActivity : AppCompatActivity() {
     companion object {
         const val EMPLOYEE = "employee"
     }
-
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
+    }
 }
