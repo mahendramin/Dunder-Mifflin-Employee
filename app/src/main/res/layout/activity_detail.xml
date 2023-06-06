@@ -38,9 +38,9 @@
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/cardEmployee"
-            android:layout_width="@dimen/dimen_300dp"
-            android:layout_height="@dimen/dimen_300dp"
-            android:layout_marginTop="@dimen/dimen_125dp"
+            android:layout_width="@dimen/dimen_200dp"
+            android:layout_height="@dimen/dimen_200dp"
+            android:layout_marginTop="@dimen/dimen_190dp"
             app:layout_constraintEnd_toEndOf="@id/imgBackground"
             app:layout_constraintStart_toStartOf="@id/imgBackground"
             app:layout_constraintTop_toTopOf="@id/imgBackground"
