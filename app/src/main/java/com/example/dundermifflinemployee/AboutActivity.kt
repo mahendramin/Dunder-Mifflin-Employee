@@ -15,7 +15,7 @@ class AboutActivity : AppCompatActivity() {
         setSupportActionBar(binding.toolbar)
 
         supportActionBar?.let {
-            title = "About"
+            title = getString(R.string.label_about)
             it.setDisplayShowHomeEnabled(true)
             it.setDisplayHomeAsUpEnabled(true)
         }

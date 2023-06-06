@@ -28,7 +28,8 @@
         <ImageView
             android:id="@+id/imgBackground"
             android:layout_width="match_parent"
-            android:layout_height="300dp"
+            android:layout_height="@dimen/dimen_300dp"
+            android:contentDescription="@null"
             android:scaleType="fitXY"
             android:src="@drawable/scranton_branch"
             app:layout_constraintEnd_toEndOf="parent"
@@ -37,21 +38,22 @@
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/cardEmployee"
-            android:layout_width="300dp"
-            android:layout_height="300dp"
-            android:layout_marginTop="125dp"
+            android:layout_width="@dimen/dimen_300dp"
+            android:layout_height="@dimen/dimen_300dp"
+            android:layout_marginTop="@dimen/dimen_125dp"
             app:layout_constraintEnd_toEndOf="@id/imgBackground"
             app:layout_constraintStart_toStartOf="@id/imgBackground"
             app:layout_constraintTop_toTopOf="@id/imgBackground"
             app:strokeColor="@color/white"
-            app:strokeWidth="2dp">
+            app:strokeWidth="@dimen/dimen_2dp">
 
             <ImageView
                 android:id="@+id/imgEmployee"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:contentDescription="@string/content_description_employee_picture"
                 android:scaleType="fitXY"
-                tools:src="@drawable/michael" />
+                tools:src="@tools:sample/avatars" />
 
         </com.google.android.material.card.MaterialCardView>
 
@@ -59,9 +61,9 @@
             android:id="@+id/tvEmployeeName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="@dimen/dimen_8dp"
             android:textAlignment="center"
-            android:textSize="30sp"
+            android:textSize="@dimen/dimen_text_size_30sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -72,21 +74,21 @@
             android:id="@+id/tvEmployeeRole"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="@dimen/dimen_8dp"
             android:textAlignment="center"
-            android:textSize="24sp"
+            android:textSize="@dimen/dimen_text_size_24sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tvEmployeeName"
             tools:text="Employee Role" />
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnShare"
+            android:id="@+id/action_share"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="16dp"
-            android:layout_marginTop="16dp"
-            android:text="Share"
+            android:layout_marginHorizontal="@dimen/dimen_16dp"
+            android:layout_marginTop="@dimen/dimen_16dp"
+            android:text="@string/action_share"
             app:icon="@drawable/baseline_share_24"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tvEmployeeRole" />
@@ -95,13 +97,13 @@
             android:id="@+id/tvEmployeeOverview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="16dp"
-            android:layout_marginVertical="16dp"
-            android:textSize="20sp"
+            android:layout_marginHorizontal="@dimen/dimen_16dp"
+            android:layout_marginVertical="@dimen/dimen_16dp"
+            android:textSize="@dimen/dimen_text_size_20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/btnShare"
+            app:layout_constraintTop_toBottomOf="@id/action_share"
             tools:text="Employees Overview" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

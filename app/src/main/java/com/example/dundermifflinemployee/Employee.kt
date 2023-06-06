@@ -8,5 +8,5 @@ data class Employee(
     val name: String,
     val role: String,
     val image: Int,
-    val description: String
+    val overview: String
 ): Parcelable

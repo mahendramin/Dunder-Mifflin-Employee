@@ -28,19 +28,19 @@ class DetailActivity : AppCompatActivity() {
         }
         employeeData?.let { employee ->
             binding.apply {
-                supportActionBar?.title = "${employee.name}'s Profile"
+                supportActionBar?.title = getString(R.string.title_format_employee_name, employee.name)
                 tvEmployeeName.text = employee.name
-                tvEmployeeRole.text = employee.role
-                tvEmployeeOverview.text = employee.description
+                tvEmployeeRole.text = getString(R.string.label_format_employee_role, employee.role)
+                tvEmployeeOverview.text = employee.overview
                 Glide.with(this@DetailActivity)
                     .load(employee.image)
                     .into(imgEmployee)
-                btnShare.setOnClickListener {
+                actionShare.setOnClickListener {
                     val sendIntent = Intent().apply {
                         action = Intent.ACTION_SEND
                         putExtra(
                             Intent.EXTRA_TEXT,
-                            "Here is the information about ${employee.name}, ${employee.role} of Dunder Mifflin Scranton: ${employee.description}"
+                            getString(R.string.label_format_share_text_content, employee.name, employee.role, employee.overview)
                         )
                         type = "text/plain"
                     }

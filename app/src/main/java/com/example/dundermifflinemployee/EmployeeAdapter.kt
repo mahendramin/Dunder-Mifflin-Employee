@@ -9,14 +9,17 @@ import com.example.dundermifflinemployee.databinding.ItemRowEmployeeBinding
 class EmployeeAdapter(
     private val listEmployee: ArrayList<Employee>,
     private val onClick: (Employee) -> Unit
-    ) :
+) :
     RecyclerView.Adapter<EmployeeAdapter.EmployeeViewHolder>() {
     inner class EmployeeViewHolder(var binding: ItemRowEmployeeBinding) :
         RecyclerView.ViewHolder(binding.root)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): EmployeeViewHolder {
         val binding =
-            ItemRowEmployeeBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+            ItemRowEmployeeBinding.inflate(
+                LayoutInflater.from(parent.context), parent,
+                false
+            )
         return EmployeeViewHolder(binding)
     }
 

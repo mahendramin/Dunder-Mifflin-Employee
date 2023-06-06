@@ -17,7 +17,6 @@
             android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-
             app:layout_constraintTop_toTopOf="parent">
 
             <com.google.android.material.appbar.MaterialToolbar
@@ -29,11 +28,11 @@
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/imgAvatar"
-            android:layout_width="300dp"
-            android:layout_height="300dp"
+            android:layout_width="@dimen/dimen_300dp"
+            android:layout_height="@dimen/dimen_300dp"
             android:src="@drawable/amin"
             app:civ_border_color="?attr/colorControlNormal"
-            app:civ_border_width="2dp"
+            app:civ_border_width="@dimen/dimen_2dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -43,10 +42,10 @@
             android:id="@+id/tvName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="Amin Mahendra"
+            android:layout_marginTop="@dimen/dimen_16dp"
+            android:text="@string/label_name_value"
             android:textAlignment="center"
-            android:textSize="32sp"
+            android:textSize="@dimen/dimen_text_size_32sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -56,10 +55,10 @@
             android:id="@+id/tvEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:text="mahendramin19@gmail.com"
+            android:layout_marginBottom="@dimen/dimen_16dp"
+            android:text="@string/label_email_value"
             android:textAlignment="center"
-            android:textSize="24sp"
+            android:textSize="@dimen/dimen_text_size_24sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

@@ -20,16 +20,22 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         setSupportActionBar(binding.toolbar)
         listEmployee.addAll(getListEmployee())
-        setRecylerView()
+        setRecyclerView()
     }
-    private fun getListEmployee() : ArrayList<Employee> {
+
+    private fun getListEmployee(): ArrayList<Employee> {
         val listEmployee = ArrayList<Employee>()
         val dataName = resources.getStringArray(R.array.data_name)
         val dataRole = resources.getStringArray(R.array.data_role)
         val dataDescription = resources.getStringArray(R.array.data_description)
         val dataPicture = resources.obtainTypedArray(R.array.data_photo)
         for (i in dataName.indices) {
-            val employee = Employee(dataName[i], dataRole[i], dataPicture.getResourceId(i, -1), dataDescription[i])
+            val employee = Employee(
+                dataName[i],
+                dataRole[i],
+                dataPicture.getResourceId(i, -1),
+                dataDescription[i]
+            )
             listEmployee.add(employee)
         }
         dataPicture.recycle()
@@ -42,16 +48,16 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-         when(item.itemId) {
-             R.id.favorite -> {
-                 val aboutIntent = Intent(this, AboutActivity::class.java)
-                 startActivity(aboutIntent)
-             }
-         }
+        when (item.itemId) {
+            R.id.about_page -> {
+                val aboutIntent = Intent(this, AboutActivity::class.java)
+                startActivity(aboutIntent)
+            }
+        }
         return true
     }
 
-    private fun setRecylerView() {
+    private fun setRecyclerView() {
         binding.rvEmployee.apply {
             setHasFixedSize(true)
             layoutManager = LinearLayoutManager(this@MainActivity)

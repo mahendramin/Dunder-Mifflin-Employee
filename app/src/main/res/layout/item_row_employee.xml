@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginHorizontal="16dp"
-    android:layout_marginVertical="4dp"
-    app:cardElevation="2dp">
+    android:layout_marginHorizontal="@dimen/dimen_16dp"
+    android:layout_marginVertical="@dimen/dimen_4dp"
+    app:cardElevation="@dimen/dimen_2dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -14,24 +14,25 @@
 
         <ImageView
             android:id="@+id/imgEmployee"
-            android:layout_width="75dp"
-            android:layout_height="75dp"
-            android:layout_marginEnd="16dp"
-            tools:src="@drawable/michael"
+            android:layout_width="@dimen/dimen_75dp"
+            android:layout_height="@dimen/dimen_75dp"
+            android:layout_marginEnd="@dimen/dimen_16dp"
+            android:contentDescription="@string/content_description_employee_picture"
             android:scaleType="fitXY"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@tools:sample/avatars" />
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/tvEmployeeName"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/dimen_0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="4dp"
-            android:layout_marginEnd="16dp"
+            android:layout_marginStart="@dimen/dimen_8dp"
+            android:layout_marginTop="@dimen/dimen_4dp"
+            android:layout_marginEnd="@dimen/dimen_16dp"
             android:maxLines="2"
-            android:textSize="20sp"
+            android:textSize="@dimen/dimen_text_size_20sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/tvEmployeeRole"
             app:layout_constraintEnd_toEndOf="parent"
@@ -42,11 +43,11 @@
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/tvEmployeeRole"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/dimen_0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="4dp"
+            android:layout_marginStart="@dimen/dimen_8dp"
+            android:layout_marginEnd="@dimen/dimen_16dp"
+            android:layout_marginBottom="@dimen/dimen_4dp"
             android:maxLines="2"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
