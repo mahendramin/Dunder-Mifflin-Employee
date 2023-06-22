@@ -1,121 +1,130 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".DetailActivity">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <com.google.android.material.appbar.AppBarLayout
-            android:id="@+id/appBar"
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            android:layout_height="match_parent" />
 
-            <com.google.android.material.appbar.MaterialToolbar
-                android:id="@+id/toolbar"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+    </com.google.android.material.appbar.AppBarLayout>
 
-        </com.google.android.material.appbar.AppBarLayout>
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appBar">
 
-        <ImageView
-            android:id="@+id/imgBackground"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="@dimen/dimen_300dp"
-            android:contentDescription="@null"
-            android:scaleType="fitXY"
-            android:src="@drawable/scranton_branch"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/appBar" />
-
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/cardEmployee"
-            android:layout_width="@dimen/dimen_200dp"
-            android:layout_height="@dimen/dimen_200dp"
-            android:layout_marginTop="@dimen/dimen_190dp"
-            app:layout_constraintEnd_toEndOf="@id/imgBackground"
-            app:layout_constraintStart_toStartOf="@id/imgBackground"
-            app:layout_constraintTop_toTopOf="@id/imgBackground"
-            app:strokeColor="@color/white"
-            app:strokeWidth="@dimen/dimen_2dp">
+            android:layout_height="match_parent">
 
             <ImageView
-                android:id="@+id/imgEmployee"
+                android:id="@+id/imgBackground"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:contentDescription="@string/content_description_employee_picture"
+                android:layout_height="@dimen/dimen_300dp"
+                android:contentDescription="@null"
                 android:scaleType="fitXY"
-                tools:src="@tools:sample/avatars" />
+                android:src="@drawable/scranton_branch"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardEmployee"
+                android:layout_width="@dimen/dimen_200dp"
+                android:layout_height="@dimen/dimen_200dp"
+                android:layout_marginTop="@dimen/dimen_190dp"
+                app:layout_constraintEnd_toEndOf="@id/imgBackground"
+                app:layout_constraintStart_toStartOf="@id/imgBackground"
+                app:layout_constraintTop_toTopOf="@id/imgBackground"
+                app:strokeColor="@color/white"
+                app:strokeWidth="@dimen/dimen_2dp">
 
-        <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/tvEmployeeName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dimen_8dp"
-            android:textAlignment="center"
-            android:textSize="@dimen/dimen_text_size_30sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/cardEmployee"
-            tools:text="Employee Name" />
+                <ImageView
+                    android:id="@+id/imgEmployee"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/content_description_employee_picture"
+                    android:scaleType="fitXY"
+                    tools:src="@tools:sample/avatars" />
 
-        <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/tvEmployeeRole"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="@dimen/dimen_16dp"
-            android:layout_marginTop="@dimen/dimen_8dp"
-            android:textSize="@dimen/dimen_text_size_24sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tvEmployeeName"
-            tools:text="Employee Role" />
+            </com.google.android.material.card.MaterialCardView>
 
-        <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/tvActorName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="@dimen/dimen_16dp"
-            android:layout_marginTop="@dimen/dimen_8dp"
-            android:textSize="@dimen/dimen_text_size_24sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tvEmployeeRole"
-            tools:text="Portrayed By: Actor Name" />
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvEmployeeName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_8dp"
+                android:textAlignment="center"
+                android:textSize="@dimen/dimen_text_size_30sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardEmployee"
+                tools:text="Employee Name" />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/action_share"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="@dimen/dimen_16dp"
-            android:layout_marginTop="@dimen/dimen_16dp"
-            android:text="@string/action_share"
-            app:icon="@drawable/baseline_share_24"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tvActorName" />
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvEmployeeRole"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dimen_16dp"
+                android:layout_marginTop="@dimen/dimen_8dp"
+                android:textSize="@dimen/dimen_text_size_24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvEmployeeName"
+                tools:text="Employee Role" />
 
-        <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/tvEmployeeOverview"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="@dimen/dimen_16dp"
-            android:layout_marginVertical="@dimen/dimen_16dp"
-            android:textSize="@dimen/dimen_text_size_20sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/action_share"
-            tools:text="Employees Overview" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</ScrollView>
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvActorName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dimen_16dp"
+                android:layout_marginTop="@dimen/dimen_8dp"
+                android:textSize="@dimen/dimen_text_size_24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvEmployeeRole"
+                tools:text="Portrayed By: Actor Name" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/action_share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dimen_16dp"
+                android:layout_marginTop="@dimen/dimen_16dp"
+                android:text="@string/action_share"
+                app:icon="@drawable/baseline_share_24"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvActorName" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvEmployeeOverview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dimen_16dp"
+                android:layout_marginVertical="@dimen/dimen_16dp"
+                android:textSize="@dimen/dimen_text_size_20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/action_share"
+                tools:text="Employees Overview" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
